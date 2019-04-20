@@ -6,7 +6,7 @@
   const enableKey = prefix + 'enable'
 
   const listener = _ => {
-    browser.proxy.settings.set({
+    (browser || chrome).proxy.settings.set({
       value: ~~localStorage.getItem(enableKey) ? {
         http: 'http://localhost:8334',
         httpProxyAll: true,

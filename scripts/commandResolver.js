@@ -11,5 +11,5 @@
     localStorage.setItem(enableKey, (~localStorage.getItem(enableKey)).toString()) :
     localStorage.setItem(modeKey, e)
 
-  browser.commands.onCommand.addListener(listener)
+  (browser || chrome).commands.onCommand.addListener(listener)
 })

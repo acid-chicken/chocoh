@@ -25,7 +25,7 @@
         localStorage.getItem(modeKey) === input.value
     }
 
-    browser.proxy.settings.set({
+    (browser || chrome).proxy.settings.set({
       value: ~~localStorage.getItem(enableKey) ? {
         http: 'http://localhost:8334',
         httpProxyAll: true,
@@ -65,6 +65,6 @@
   }
 
   for (const label of labels) {
-    label.innerText = browser.i18n.getMessage('index.' + label.id)
+    label.innerText = (browser || chrome).i18n.getMessage('index__' + label.id)
   }
 })()

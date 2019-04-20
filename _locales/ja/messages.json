@@ -1,32 +1,32 @@
 {
-  "index.toggle_label": {
+  "index__toggle_label": {
     "message": "ﾁｮｺｴｯ を使用する"
   },
-  "index.red_label": {
+  "index__red_label": {
     "message": "RB にする"
   },
-  "index.green_label": {
+  "index__green_label": {
     "message": "GB にする"
   },
-  "index.blue_label": {
+  "index__blue_label": {
     "message": "BB にする"
   },
   "__author": {
     "message": "硫酸鶏"
   },
-  "__browser_action.default_title": {
+  "__browser_action__default_title": {
     "message": "ﾁｮｺｴｯ"
   },
-  "__commands.toggle.description": {
+  "__commands__toggle__description": {
     "message": "有効無効の切替"
   },
-  "__commands.red.description": {
+  "__commands__red__description": {
     "message": "RB にする"
   },
-  "__commands.green.description": {
+  "__commands__green__description": {
     "message": "GB にする"
   },
-  "__commands.blue.description": {
+  "__commands__blue__description": {
     "message": "BB にする"
   },
   "__name": {

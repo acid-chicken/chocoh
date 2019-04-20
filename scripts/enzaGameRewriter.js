@@ -23,7 +23,7 @@
       filter.write(encoder.encode(getOrCreate(builder)))
       filter.close()
     }
-  })(browser.webRequest.filterResponseData(requestId))
+  })((browser || chrome).webRequest.filterResponseData(requestId))
 
   const onBeforeRequest = e => (bodyRewriter(e.requestId), {})
 
@@ -41,5 +41,5 @@
     'blocking'
   ]
 
-  browser.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter, onBeforeRequestExtraInfoSpec)
+  (browser || chrome).webRequest.onBeforeRequest.addListener(onBeforeRequest, filter, onBeforeRequestExtraInfoSpec)
 })()

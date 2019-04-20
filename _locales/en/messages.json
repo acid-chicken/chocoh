@@ -1,32 +1,32 @@
 {
-  "index.toggle_label": {
+  "index__toggle_label": {
     "message": "Enable chocoh"
   },
-  "index.red_label": {
+  "index__red_label": {
     "message": "Use Red Background"
   },
-  "index.green_label": {
+  "index__green_label": {
     "message": "Use Green Background"
   },
-  "index.blue_label": {
+  "index__blue_label": {
     "message": "Use Blue Background"
   },
   "__author": {
     "message": "Acid Chicken"
   },
-  "__browser_action.default_title": {
+  "__browser_action__default_title": {
     "message": "chocoh"
   },
-  "__commands.toggle.description": {
+  "__commands__toggle__description": {
     "message": "Toggle On/Off"
   },
-  "__commands.red.description": {
+  "__commands__red__description": {
     "message": "Use Red Background"
   },
-  "__commands.green.description": {
+  "__commands__green__description": {
     "message": "Use Green Background"
   },
-  "__commands.blue.description": {
+  "__commands__blue__description": {
     "message": "Use Blue Background"
   },
   "__name": {
