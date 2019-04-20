@@ -1,0 +1,74 @@
+{
+  "application": {
+    "gecko": {
+      "id": "chocoh@acid-chicken.com"
+    }
+  },
+  "author": "__MSG___author__",
+  "background": {
+    "scripts": [
+      "scripts/assetFontsRedirector.js",
+      "scripts/assetImagesRedirector.js",
+//       "scripts/commandResolver.js",
+//       "scripts/proxyManager.js",
+      "scripts/trackingCanceller.js"
+    ]
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "assets/logo.svg",
+    "default_title": "__MSG___browser_action.default_title__",
+    "default_popup": "pages/index.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chocoh@acid-chicken.com"
+    }
+  },
+  "commands": {
+//     "toggle": {
+//       "suggested_key": {
+//         "default": "Alt+Shift+F"
+//       },
+//       "description": "__MSG___commands.toggle.description__"
+//     },
+//     "red": {
+//       "suggested_key": {
+//         "default": "Alt+Shift+R"
+//       },
+//       "description": "__MSG___commands.red.description__"
+//     },
+//     "green": {
+//       "suggested_key": {
+//         "default": "Alt+Shift+G"
+//       },
+//       "description": "__MSG___commands.green.description__"
+//     },
+//     "blue": {
+//       "suggested_key": {
+//         "default": "Alt+Shift+B"
+//       },
+//       "description": "__MSG___commands.blue.description__"
+//     }
+  },
+  "default_locale": "en",
+  "manifest_version": 2,
+  "name": "__MSG___name__",
+  "permissions": [
+//     "background",
+    "browserSettings",
+    "proxy",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.googletagmanager.com/",
+    "https://shinycolors.enza.fun/",
+    "https://tracking.shinycolors.enza.fun/",
+    "https://sentry.io/",
+    "https://s.yjtag.jp/"
+  ],
+  "version": "1.0.0",
+  "web_accessible_resources": [
+    "assets/logo.svg"
+  ]
+}
