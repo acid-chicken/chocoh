@@ -5,8 +5,8 @@
 
   const enableKey = prefix + 'enable'
 
-  const onBeforeRequest = e => ~~localStorage.getItem(enableKey) ? {
-    redirectUrl: e.url.replace('//shinycolors.enza.fun/assets/', `//shinycolors.enza.fun/chocoh/medias/`)
+  const onBeforeRequest = e => ~~localStorage.getItem(enableKey) && e.url.split('?')[0].endsWith('.m4a') ? {
+    redirectUrl: e.url.replace('//shinycolors.enza.fun/assets/', `//shinycolors.enza.fun/chocoh/audios/`)
   } : {
   }
 
