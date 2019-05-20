@@ -15,7 +15,8 @@
       'https://shinycolors.enza.fun/assets/*'
     ],
     types: [
-      'media'
+      'media',
+      'xmlhttprequest'
     ]
   }
 
