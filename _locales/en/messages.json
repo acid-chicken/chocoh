@@ -2,6 +2,9 @@
   "index__toggle_label": {
     "message": "Enable chocoh"
   },
+  "index__none_label": {
+    "message": "Disable background tweaking"
+  },
   "index__red_label": {
     "message": "Use Red Background"
   },

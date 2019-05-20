@@ -9,6 +9,7 @@
 
   const ids = [
     'toggle',
+    'none',
     'red',
     'green',
     'blue'
@@ -41,7 +42,7 @@
   }
 
   if (!localStorage.getItem(modeKey)) {
-    localStorage.setItem(modeKey, 'blue')
+    localStorage.setItem(modeKey, 'none')
   }
 
   document.addEventListener('storage', listener)
