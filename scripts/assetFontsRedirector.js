@@ -5,6 +5,8 @@
 
   const enableKey = prefix + 'enable'
 
+  const modeKey = prefix + 'mode'
+
   const onBeforeRequest = e => localStorage.getItem(enableKey) && localStorage.getItem(modeKey) !== 'none' ? {
     redirectUrl: e.url.replace('//shinycolors.enza.fun/assets/', '//shinycolors.enza.fun/chocoh/fonts/')
   } : {
