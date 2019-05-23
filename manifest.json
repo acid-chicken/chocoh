@@ -24,6 +24,19 @@
       "id": "chocoh@acid-chicken.com"
     }
   },
+  "content_scripts": [
+    {
+      "css": [
+        "styles/canvasRecorder.css"
+      ],
+      "js": [
+        "scripts/canvasRecorder.js"
+      ],
+      "matches": [
+        "https://shinycolors.enza.fun/*"
+      ]
+    }
+  ],
   "commands": {
   },
   "default_locale": "en",

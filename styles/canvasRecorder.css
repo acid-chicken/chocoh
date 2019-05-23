@@ -1,0 +1,2 @@
+.record::before{animation:rec 2s linear infinite alternate}
+@keyframes rec{from{background:#fff}to{background:#f00}}
