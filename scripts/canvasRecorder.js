@@ -6,7 +6,9 @@
   let recorder = null
 
   const push = e => {
-    chunks.push(e.data)
+    if (e.data) {
+      chunks.push(e.data)
+    }
   }
 
   const pull = e => {
