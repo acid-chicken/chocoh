@@ -26,7 +26,6 @@
   }
 
   const start = () => {
-
     if (recorder) {
       return
     }
