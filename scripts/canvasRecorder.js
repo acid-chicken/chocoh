@@ -38,7 +38,17 @@
 
     document.body.classList.add('record')
 
-    recorder = new MediaRecorder(canvas.captureStream())
+    const audioContext =
+      window.aoba &&
+      window.aoba.utils &&
+      window.aoba.utils.audioContext
+
+    const stream = new MediaStream([
+      canvas instanceof HTMLCanvasElement && canvas.captureStream(),
+      audioContext instanceof AudioContext && audioContext.createMediaStreamDestination().stream
+    ].filter(x => x).reduce((a, c) => a.concat(c.getTracks()), []))
+
+    recorder = new MediaRecorder(stream)
 
     recorder.addEventListener('dataavailable', push)
 
