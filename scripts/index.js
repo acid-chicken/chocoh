@@ -26,7 +26,7 @@
         localStorage.getItem(modeKey) === input.value
     }
 
-    (browser || chrome).proxy.settings.set({
+    browser.proxy.settings.set({
       value: ~~localStorage.getItem(enableKey) ? {
         http: 'http://localhost:8334',
         httpProxyAll: true,
@@ -49,23 +49,23 @@
 
   listener()
 
+  const toggle = x => {
+    localStorage.setItem(enableKey, (~~x.checked).toString())
+
+    listener()
+  }
+
+  const notToggle = x => {
+    localStorage.setItem(modeKey, x.value)
+
+    listener()
+  }
+
   for (const input of inputs) {
-    if (input.id === 'toggle') {
-      input.addEventListener('change', _ => {
-        localStorage.setItem(enableKey, (~~input.checked).toString())
-
-        listener()
-      })
-    } else {
-      input.addEventListener('change', _ => {
-        localStorage.setItem(modeKey, input.value)
-
-        listener()
-      })
-    }
+    input.addEventListener('change', (input.id === 'toggle' ? toggle : notToggle).call(null, input))
   }
 
   for (const label of labels) {
-    label.innerText = (browser || chrome).i18n.getMessage('index__' + label.id)
+    label.innerText = browser.i18n.getMessage('index__' + label.id)
   }
 })()
