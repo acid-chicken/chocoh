@@ -10,6 +10,7 @@
       "scripts/assetAudiosRedirector.js",
       "scripts/assetFontsRedirector.js",
       "scripts/assetImagesRedirector.js",
+      "scripts/indexRewriter.js",
       "scripts/trackingCanceller.js"
     ]
   },
