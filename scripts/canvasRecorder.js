@@ -23,6 +23,8 @@
     a.dispatchEvent(new MouseEvent('click', {
       bubbles: false
     }))
+
+    recorder = null
   }
 
   const start = () => {
