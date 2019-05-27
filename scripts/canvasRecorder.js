@@ -1,6 +1,30 @@
 'use strict'
 
 !(() => {
+  const context = new AudioContext()
+
+  let ses = {
+  }
+
+  const base = ['https:', '', 'shinycolors.enza.fun', 'assets']
+
+  for (const [k, v] of Object.entries({
+    camera: '51d3869d32bf9dab4a7ef6c1921eb011aa89e276ce4e4c327100ec297cdfc9a0.m4a',
+    oven: 'd1c8930d816be1515c41dd84dfee0409b58633371df4812c3b17f771cbe7ade6.m4a',
+    whistle: '7992b8f129d9848b4dddb4b037b3a4772525dd2cbf4b4e6adce23c42e2eb34a7.m4a'
+  })) {
+    fetch([...base, v].join('/'))
+      .then(x => x.arrayBuffer())
+      .then(x => context.decodeAudioData(x))
+      .then(x => ses[k] = x)
+  }
+
+  const play = name => ses[name] && (source => (
+    source.buffer = ses[name],
+    source.connect(context.destination),
+    source.start()
+  ))(context.createBufferSource())
+
   const chunks = []
 
   let recorder = null
@@ -19,6 +43,8 @@
     a.download = Date.now() + '.webm'
 
     a.href = URL.createObjectURL(new Blob(chunks.splice(0)))
+
+    play('oven')
 
     a.dispatchEvent(new MouseEvent('click', {
       bubbles: false
@@ -39,6 +65,8 @@
     }
 
     document.body.classList.add('record')
+
+    play('whistle')
 
     recorder = new MediaRecorder(canvas.captureStream())
 
@@ -103,6 +131,8 @@
         a.download = Date.now() + '.png'
 
         a.href = canvas.toDataURL()
+
+        play('camera')
 
         a.dispatchEvent(new MouseEvent('click', {
           bubbles: false
