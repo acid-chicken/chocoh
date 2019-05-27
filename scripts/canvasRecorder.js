@@ -9,9 +9,9 @@
   const base = ['https:', '', 'shinycolors.enza.fun', 'assets']
 
   for (const [k, v] of Object.entries({
-    camera: '51d3869d32bf9dab4a7ef6c1921eb011aa89e276ce4e4c327100ec297cdfc9a0.m4a',
-    oven: 'd1c8930d816be1515c41dd84dfee0409b58633371df4812c3b17f771cbe7ade6.m4a',
-    whistle: '7992b8f129d9848b4dddb4b037b3a4772525dd2cbf4b4e6adce23c42e2eb34a7.m4a'
+    camera: '51d3869d32bf9dab4a7ef6c1921eb011aa89e276ce4e4c327100ec297cdfc9a0.m4a?v=0',
+    oven: 'd1c8930d816be1515c41dd84dfee0409b58633371df4812c3b17f771cbe7ade6.m4a?v=0',
+    whistle: '7992b8f129d9848b4dddb4b037b3a4772525dd2cbf4b4e6adce23c42e2eb34a7.m4a?v=0'
   })) {
     fetch([...base, v].join('/'))
       .then(x => x.arrayBuffer())
