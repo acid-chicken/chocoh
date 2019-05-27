@@ -49,20 +49,20 @@
 
   listener()
 
-  const toggle = x => {
-    localStorage.setItem(enableKey, (~~x.checked).toString())
-
-    listener()
-  }
-
-  const notToggle = x => {
-    localStorage.setItem(modeKey, x.value)
-
-    listener()
-  }
-
   for (const input of inputs) {
-    input.addEventListener('change', (input.id === 'toggle' ? toggle : notToggle).call(null, input))
+    if (input.id === 'toggle') {
+      input.addEventListener('change', _ => {
+        localStorage.setItem(enableKey, (~~input.checked).toString())
+
+        listener()
+      })
+    } else {
+      input.addEventListener('change', _ => {
+        localStorage.setItem(modeKey, input.value)
+
+        listener()
+      })
+    }
   }
 
   for (const label of labels) {
