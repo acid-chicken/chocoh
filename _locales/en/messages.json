@@ -20,18 +20,6 @@
   "__browser_action__default_title": {
     "message": "chocoh"
   },
-  "__commands__toggle__description": {
-    "message": "Toggle On/Off"
-  },
-  "__commands__red__description": {
-    "message": "Use Red Background"
-  },
-  "__commands__green__description": {
-    "message": "Use Green Background"
-  },
-  "__commands__blue__description": {
-    "message": "Use Blue Background"
-  },
   "__name": {
     "message": "chocoh"
   }

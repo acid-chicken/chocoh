@@ -20,18 +20,6 @@
   "__browser_action__default_title": {
     "message": "ﾁｮｺｴｯ"
   },
-  "__commands__toggle__description": {
-    "message": "有効無効の切替"
-  },
-  "__commands__red__description": {
-    "message": "RB にする"
-  },
-  "__commands__green__description": {
-    "message": "GB にする"
-  },
-  "__commands__blue__description": {
-    "message": "BB にする"
-  },
   "__name": {
     "message": "ﾁｮｺｴｯ"
   }
