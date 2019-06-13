@@ -160,4 +160,34 @@
     e.preventDefault()
 
   addEventListener('keydown', listener, true)
+
+  const fpsContainer = document.body.appendChild(document.createElement('div'))
+
+  fpsContainer.style = 'background:#fff7;border-radius:6px 0 0 0;bottom:0;font:12px/2 "Helvetica Neue",Arial,status-bar,sans-serif;padding:0 1ex;position:absolute;right:0;z-index:1'
+
+  const fps = fpsContainer.appendChild(new Text())
+
+  const cache = Array(60)
+
+  let index = 0
+
+  let origin = null
+
+  const clock = e => {
+    if (origin) {
+      cache[index++] = e - origin
+    }
+
+    origin = e
+
+    if (index === 60) {
+      index = 0
+
+      fps.data = `${(60000 / cache.reduce((a, c) => a + c, 0)).toFixed(2)} FPS`
+    }
+
+    requestAnimationFrame(clock)
+  }
+
+  requestAnimationFrame(clock)
 })()
