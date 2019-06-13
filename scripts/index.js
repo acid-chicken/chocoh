@@ -12,7 +12,12 @@
     'none',
     'red',
     'green',
-    'blue'
+    'blue',
+    'cyan',
+    'magenta',
+    'yellow',
+    'black',
+    'white'
   ]
 
   const inputs = ids.map(x => document.getElementById(x)).filter(x => x)

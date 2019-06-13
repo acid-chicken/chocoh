@@ -14,6 +14,21 @@
   "index__blue_label": {
     "message": "Use Blue Background"
   },
+  "index__cyan_label": {
+    "message": "Use Cyan Background"
+  },
+  "index__magenta_label": {
+    "message": "Use Magenta Background"
+  },
+  "index__yellow_label": {
+    "message": "Use Yellow Background"
+  },
+  "index__black_label": {
+    "message": "Use Key-plate Background"
+  },
+  "index__white_label": {
+    "message": "Use White Background"
+  },
   "__author": {
     "message": "Acid Chicken"
   },

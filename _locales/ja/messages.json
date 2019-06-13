@@ -14,6 +14,21 @@
   "index__blue_label": {
     "message": "BB にする"
   },
+  "index__cyan_label": {
+    "message": "CB にする"
+  },
+  "index__magenta_label": {
+    "message": "MB にする"
+  },
+  "index__yellow_label": {
+    "message": "YB にする"
+  },
+  "index__black_label": {
+    "message": "KB にする"
+  },
+  "index__white_label": {
+    "message": "WB にする"
+  },
   "__author": {
     "message": "硫酸鶏"
   },
