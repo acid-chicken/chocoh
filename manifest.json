@@ -54,7 +54,7 @@
     "https://sentry.io/",
     "https://s.yjtag.jp/"
   ],
-  "version": "1.3.0",
+  "version": "1.4.0",
   "web_accessible_resources": [
     "assets/logo.svg"
   ]
