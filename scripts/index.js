@@ -11,6 +11,7 @@
 
   const ids = [
     'toggle',
+    '_none',
     '_largeonly',
     '_smallonly',
     'none',
