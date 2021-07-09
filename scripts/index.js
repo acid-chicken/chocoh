@@ -6,9 +6,13 @@
   const enableKey = prefix + 'enable'
 
   const modeKey = prefix + 'mode'
+  
+  const firstattrKey = prefix + 'firstattr'
 
   const ids = [
     'toggle',
+    '_largeonly',
+    '_smallonly',
     'none',
     'red',
     'green',
@@ -29,7 +33,9 @@
     for (const input of inputs) {
       input.checked = input.id === 'toggle' ?
         ~~localStorage.getItem(enableKey) :
-        localStorage.getItem(modeKey) === input.value
+        input.id.startsWith('_') ?
+          localStorage.getItem(firstattrKey) === input.value :
+          localStorage.getItem(modeKey) === input.value
     }
 
     browser.proxy.settings.set({
@@ -50,6 +56,10 @@
   if (!localStorage.getItem(modeKey)) {
     localStorage.setItem(modeKey, 'none')
   }
+  
+  if (!localStorage.getItem(firstattrKey)) {
+    localStorage.setItem(firstattrKey, '')
+  }
 
   document.addEventListener('storage', listener)
 
@@ -59,6 +69,12 @@
     if (input.id === 'toggle') {
       input.addEventListener('change', _ => {
         localStorage.setItem(enableKey, (~~input.checked).toString())
+
+        listener()
+      })
+    } else if (input.id.startsWith('_')) {
+      input.addEventListener('change', _ => {
+        localStorage.setItem(firstattrKey, input.value)
 
         listener()
       })
