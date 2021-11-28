@@ -21,7 +21,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "chocoh@acid-chicken.com"
+      "id": "chocoh@acid-chicken.com",
+      "strict_min_version": "91.1.0"
     }
   },
   "content_scripts": [
@@ -54,7 +55,7 @@
     "https://sentry.io/",
     "https://s.yjtag.jp/"
   ],
-  "version": "1.4.2",
+  "version": "1.4.3",
   "web_accessible_resources": [
     "assets/logo.svg"
   ]
